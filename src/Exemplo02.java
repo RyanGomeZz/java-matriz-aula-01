@@ -7,7 +7,10 @@ public class Exemplo02 {
 
         int [][] num = new int[4][4];
         int somaLinha = 0;
-        int totalGeral = 0;
+        int somaColuna = 0;
+        int totalGeralLinha = 0;
+        int totalGeralColuna = 0;
+
 
         // CARREGA MATRIZ
         for (int i = 0; i < 4; i ++){
@@ -17,193 +20,32 @@ public class Exemplo02 {
             }
         }
 
-        // SOMAR MATRIZ
+        // SOMAR MATRIZ (LINHA)
+        System.out.println("\n---> Somando Matriz Horizontal <---");
         for (int i = 0; i < 4; i ++){
             for (int j = 0; j < 4; j++){
                 somaLinha += num[i][j];
 
             }
             System.out.println("Soma da linha " + i + ": " + somaLinha);
-            totalGeral += somaLinha;
+            totalGeralLinha += somaLinha;
             somaLinha = 0;
         }
-        System.out.println("Total geral: " + totalGeral
 
 
 
+        // SOMAR MATRIZ (COLUNA)
+        System.out.println("\n ---> Somando Matriz Vertical <---");
+        for (int j = 0; j < 4; j ++){
+            for (int i = 0; i < 4; i++){
+                somaColuna += num[i][j];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    );
-
-
+            }
+            System.out.println("Soma da linha " + j + ": " + somaColuna);
+            totalGeralColuna += somaColuna;
+            somaColuna = 0;
+        }
+        System.out.println("\nTotal geral horizontal: " + totalGeralLinha +
+                "\nTotal geral vertical: " + totalGeralColuna);
     }
 }
