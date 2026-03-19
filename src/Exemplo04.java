@@ -6,18 +6,44 @@ public class Exemplo04 {
 
         Scanner entrada = new Scanner(System.in);
 
-        double [][] preco = new double [5][2];
-        int [][] codigoProduto = new int [5][2];
+        double[][] preco = new double[5][2];
+        int[][] produto = new int[5][2];
+        double totalGeral=0;
 
-        System.out.printf("---> Atividade 04 <---");
-        for (int i = 0; i <5 ; i++) {
-            System.out.println("Codigo do produto: " );
-            preco [i][0] = entrada.nextDouble();
-            System.out.println("Quantidade: ");
-            codigoProduto [i][0] = entrada.nextInt();
+        System.out.println("---> Atividade 04 <---");
 
+        for (int i = 0; i < 5; i++) {
+
+            System.out.println("\nProduto " + (i + 1));
+
+            System.out.print("Codigo do produto: ");
+            produto[i][0] = entrada.nextInt();
+
+            System.out.print("Quantidade: ");
+            produto[i][1] = entrada.nextInt();
+
+            System.out.print("Preço: ");
+            preco[i][0] = entrada.nextDouble();
+
+            // subtotal
+            preco[i][1] = produto[i][1] * preco[i][0];
+            totalGeral += preco[i][1];
         }
 
+        // RELATÓRIO
+        System.out.println("\n--- RELATORIO ---");
+        System.out.println("Cod\tQtd\tPreco\tSubtotal");
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println(
+                    produto[i][0] + "\t" +
+                            produto[i][1] + "\t" +
+                            preco[i][0] + "\t" + "\t"+
+                            preco[i][1]
+            );
+        }
+        System.out.println("\n--- TOTAL ---");
+        System.out.println("Total Geral: "+totalGeral);
 
 
     }
