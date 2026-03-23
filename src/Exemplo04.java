@@ -17,7 +17,7 @@ public class Exemplo04 {
             System.out.println("\nProduto " + (i + 1));
 
             System.out.print("Codigo do produto: ");
-            produto[i][0] = entrada.nextInt();
+            produto[i][0] = entrada.nextInt();// o 0 ou 1 fala qual a coluna a ser inserida o conteudo
 
             System.out.print("Quantidade: ");
             produto[i][1] = entrada.nextInt();
